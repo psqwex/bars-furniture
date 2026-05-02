@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Гарантия и правила эксплуатации — BARS FURNITURE</title>
+  <meta name="description" content="Условия гарантии, правила эксплуатации и хранения изделий BARS FURNITURE из нержавеющей стали AISI 304." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { max-width: 100%; height: auto; }
+    :root {
+      --bg: #0c0b09; --surface: #131210; --surface2: #1a1815;
+      --text: #f0ede8; --text-muted: #8a857c; --accent: #c9a96e;
+      --border: rgba(255,255,255,0.08);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 15px; line-height: 1.6; overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; background: rgba(12,11,9,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo img { height: 44px; filter: invert(1); opacity: 0.9; }
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .nav-logo-text span:first-child {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: transparent; border: 1px solid var(--accent) !important; color: var(--accent) !important; padding: 8px 20px; border-radius: 2px; font-size: 12px !important; transition: all 0.2s !important; }
+    .nav-cta:hover { background: var(--accent) !important; color: var(--bg) !important; }
+
+    /* PAGE HEADER */
+    .page-header { padding: 120px 80px 60px; border-bottom: 1px solid var(--border); }
+    .page-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .page-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+    .page-title { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 72px); font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; }
+    .page-title em { font-style: italic; color: var(--accent); }
+    .page-subtitle { margin-top: 20px; font-size: 15px; color: var(--text-muted); max-width: 600px; line-height: 1.8; font-weight: 300; }
+
+    /* STATS BAR */
+    .stats-bar { display: grid; grid-template-columns: repeat(2, 1fr); border-bottom: 1px solid var(--border); }
+    .stat-item { padding: 32px 40px; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; }
+    .stat-item:last-child { border-right: none; }
+    .stat-val { font-family: var(--font-serif); font-size: 48px; font-weight: 300; color: var(--accent); line-height: 1; }
+    .stat-unit { font-size: 16px; font-weight: 300; }
+    .stat-lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+
+    /* CONTENT */
+    .content-wrap { display: grid; grid-template-columns: 260px 1fr; gap: 0; }
+
+    /* SIDEBAR NAV */
+    .sidebar { padding: 48px 40px; border-right: 1px solid var(--border); position: sticky; top: 72px; align-self: start; height: calc(100vh - 72px); overflow-y: auto; }
+    .sidebar-title { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; }
+    .sidebar-links { display: flex; flex-direction: column; gap: 4px; list-style: none; }
+    .sidebar-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; padding: 8px 0; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; display: block; line-height: 1.4; }
+    .sidebar-links a:hover { color: var(--accent); }
+
+    /* MAIN CONTENT */
+    .main-content { padding: 48px 80px 100px; }
+
+    .doc-section { margin-bottom: 64px; padding-bottom: 64px; border-bottom: 1px solid var(--border); }
+    .doc-section:last-child { border-bottom: none; margin-bottom: 0; }
+
+    .doc-section-label { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .doc-section-title { font-family: var(--font-serif); font-size: 40px; font-weight: 300; margin-bottom: 28px; line-height: 1.1; }
+    .doc-section-title em { font-style: italic; color: var(--accent); }
+
+    .doc-text { font-size: 16px; color: var(--text-muted); line-height: 1.9; font-weight: 300; margin-bottom: 20px; }
+    .doc-text strong { color: var(--text); font-weight: 500; }
+
+    .doc-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 20px; border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+    .doc-list li { display: flex; gap: 16px; padding: 16px 20px; font-size: 15px; color: var(--text-muted); line-height: 1.7; border-bottom: 1px solid var(--border); font-weight: 300; }
+    .doc-list li:last-child { border-bottom: none; }
+    .doc-list li::before { content: counter(item); counter-increment: item; color: var(--accent); font-family: var(--font-serif); font-size: 18px; flex-shrink: 0; min-width: 20px; line-height: 1.4; }
+    .doc-list { counter-reset: item; }
+    .doc-list li > span { flex: 1; }
+    .doc-bullets li > span { flex: 1; }
+
+    .doc-bullets { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; padding-left: 4px; }
+    .doc-bullets li { display: flex; gap: 12px; font-size: 15px; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
+    .doc-bullets li::before { content: '—'; color: var(--accent); flex-shrink: 0; }
+
+    .notice-box { display: flex; gap: 16px; padding: 20px 24px; border: 1px solid rgba(201,169,110,0.25); border-left: 3px solid var(--accent); background: rgba(201,169,110,0.04); border-radius: 2px; margin-bottom: 20px; }
+    .notice-box-icon { flex-shrink: 0; padding-top: 2px; }
+    .notice-box-title { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .notice-box-text { font-size: 15px; color: var(--text-muted); line-height: 1.8; font-weight: 300; }
+    .notice-box-text strong { color: var(--text); font-weight: 500; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 20px; }
+    .col-block { background: var(--surface); padding: 24px; }
+    .col-block-title { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+
+    /* CTA BLOCK */
+    .cta-section { background: var(--surface); padding: 60px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .cta-text h2 { font-family: var(--font-serif); font-size: 40px; font-weight: 300; margin-bottom: 16px; }
+    .cta-text h2 em { font-style: italic; color: var(--accent); }
+    .cta-text p { font-size: 14px; color: var(--text-muted); line-height: 1.8; font-weight: 300; }
+    .cta-actions { display: flex; flex-direction: column; gap: 12px; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--accent); color: var(--bg); padding: 16px 32px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; transition: all 0.25s; text-decoration: none; }
+    .btn-primary:hover { background: #d4b47a; transform: translateY(-1px); }
+    .messenger-links { display: flex; gap: 12px; }
+    .messenger-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; border: 1px solid var(--border); border-radius: 2px; text-decoration: none; color: var(--text-muted); font-size: 13px; transition: all 0.2s; }
+    .messenger-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 48px 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+    .footer-brand img { height: 36px; filter: invert(1); opacity: 0.7; margin-bottom: 16px; }
+    .footer-tagline { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .footer-links h4 { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom { grid-column: 1 / -1; border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    
+    /* BURGER */
+    .burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+    .burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: rgba(12,11,9,0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+      padding: 24px 20px 32px;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-menu .menu-cta {
+      margin-top: 16px;
+      background: var(--accent);
+      color: var(--bg) !important;
+      text-align: center;
+      padding: 14px 20px;
+      border-radius: 2px;
+      border: none;
+      font-weight: 600;
+    }
+
+    
+    @media (max-width: 1100px) {
+      nav { padding: 0 24px; }
+      .nav-links { gap: 20px; }
+      .nav-links a { font-size: 12px; letter-spacing: 0.05em; }
+      .nav-cta { padding: 7px 14px; font-size: 11px !important; }
+      .nav-logo img { height: 36px; }
+      .nav-logo-text span:first-child { font-size: 13px; }
+    }
+
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .burger { display: flex; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 16px; }
+      .nav-logo img { height: 30px; }
+      .nav-logo-text span:first-child { font-size: 12px; }
+      .page-header { padding: 96px 20px 36px; }
+      .stats-bar { grid-template-columns: repeat(3, 1fr); }
+      .stat-item { border-right: none; border-bottom: none; padding: 20px 12px; text-align: center; }
+      .stat-num { font-size: 28px; }
+      .stat-label { font-size: 11px; }
+      .content-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .main-content { padding: 28px 20px 56px; }
+      .doc-section-title { font-size: 28px; }
+      .doc-text { font-size: 15px; }
+      .doc-list li { font-size: 14px; }
+      .doc-bullets li { font-size: 14px; }
+      .notice-box-text { font-size: 14px; }
+      .two-col { grid-template-columns: 1fr; }
+      .cta-section { grid-template-columns: 1fr; padding: 48px 20px; gap: 32px; }
+      footer { grid-template-columns: 1fr; padding: 40px 20px; gap: 24px; }
+      .footer-bottom { flex-direction: column; gap: 8px; font-size: 11px; }
+      .messenger-links { flex-wrap: wrap; }
+      .messenger-btn { flex: 1 1 40%; }
+    }
+
+    @media (max-width: 420px) {
+      .stats-bar { grid-template-columns: 1fr; }
+      .stat-item { border-bottom: 1px solid var(--border); padding: 16px 20px; text-align: left; }
+      .stat-item:last-child { border-bottom: none; }
+      .doc-section-title { font-size: 24px; }
+      .messenger-btn { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="front.html" class="nav-logo">
+    <img src="Эмблема нашей компании (Без текста).webp" alt="BARS FURNITURE" />
+    <div class="nav-logo-text">
+      <span>Bars Furniture</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><span><a href="front.html#catalog">Коллекция</a></span></li>
+    <li><span><a href="front.html#about">О нас</a></span></li>
+    <li><span><a href="front.html#b2b">B2B</a></span></li>
+    <li><span><a href="front.html#contact" class="nav-cta">Заказать</a></span></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="front.html#catalog" onclick="closeMenu()">Коллекция</a>
+  <a href="front.html#about" onclick="closeMenu()">О нас</a>
+  <a href="front.html#b2b" onclick="closeMenu()">B2B</a>
+  <a href="front.html#contact" class="menu-cta" onclick="closeMenu()">Заказать</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-label">Документация</div>
+  <h1 class="page-title">Гарантия и<br/><em>эксплуатация</em></h1>
+  <p class="page-subtitle">Условия гарантийного обслуживания, правила эксплуатации и ухода за изделиями BARS FURNITURE из нержавеющей стали AISI 304.</p>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-val">12 <span class="stat-unit">мес</span></span>
+    <span class="stat-lbl">Гарантийный срок</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">150 <span class="stat-unit">лет</span></span>
+    <span class="stat-lbl">Срок службы изделия</span>
+  </div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <ul class="sidebar-links" style="margin-top: 8px;">
+      <li><span><a href="#delivery">Доставка и оплата</a></span></li>
+      <li><span><a href="#warranty">Условия гарантии</a></span></li>
+      <li><span><a href="#exclusions">Ограничения гарантии</a></span></li>
+      <li><span><a href="#before-use">Подготовка к эксплуатации</a></span></li>
+      <li><span><a href="#rules">Правила эксплуатации</a></span></li>
+      <li><span><a href="#important">Важная информация</a></span></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main-content">
+
+    <!-- ДОСТАВКА И ОПЛАТА -->
+    <div class="doc-section" id="delivery">
+      <div class="doc-section-label">Раздел 1</div>
+      <h2 class="doc-section-title">Доставка и <em>оплата</em></h2>
+
+      <p class="doc-text">Все изделия BARS FURNITURE изготавливаются под заказ. После подтверждения заказа и согласования деталей мы приступаем к производству. Срок изготовления — <strong>15–25 рабочих дней</strong> с момента подтверждения.</p>
+
+      <div class="two-col">
+        <div class="col-block">
+          <div class="col-block-title">Доставка</div>
+          <ul class="doc-bullets">
+            <li><span>Доставка осуществляется по всей России и странам СНГ транспортной компанией СДЭК</span></li>
+            <li><span>Стоимость и сроки доставки рассчитываются индивидуально в зависимости от региона и габаритов изделия</span></li>
+            <li><span>Передача изделия в СДЭК производится после завершения производства и контроля качества</span></li>
+            <li><span>Для жителей Москвы и Московской области возможна курьерская доставка — уточняйте при оформлении заказа</span></li>
+          </ul>
+        </div>
+        <div class="col-block">
+          <div class="col-block-title">Оплата</div>
+          <ul class="doc-bullets">
+            <li><span>Оплата производится <strong>при получении</strong> в пункте выдачи или курьеру СДЭК</span></li>
+            <li><span>Принимаются наличные и банковские карты</span></li>
+            <li><span>Предоплата не требуется — вы платите только после того, как изделие прибыло в ваш город</span></li>
+            <li><span>После оплаты выдаётся товарный чек — сохраняйте его на весь гарантийный срок</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="notice-box">
+        <div class="notice-box-icon">
+          <svg viewBox="0 0 24 24" fill="none" style="width:18px;height:18px;">
+            <circle cx="12" cy="12" r="10" stroke="#c9a96e" stroke-width="1.3"/>
+            <line x1="12" y1="8" x2="12" y2="12" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="12" cy="16" r="0.8" fill="#c9a96e"/>
+          </svg>
+        </div>
+        <div>
+          <div class="notice-box-title">Перед получением</div>
+          <div class="notice-box-text">Осмотрите изделие в присутствии сотрудника СДЭК до оплаты и подписания документов. При обнаружении повреждений упаковки — зафиксируйте это в акте приёмки. <strong>После подписания документов претензии по внешнему виду не принимаются.</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ГАРАНТИЯ -->
+    <div class="doc-section" id="warranty">
+      <div class="doc-section-label">Раздел 2</div>
+      <h2 class="doc-section-title">Условия <em>гарантии</em></h2>
+
+      <p class="doc-text">Предприятие-изготовитель гарантирует соответствие изделия требованиям технической документации при соблюдении Потребителем условий эксплуатации, транспортирования и хранения, установленных в технических условиях и указанных в настоящем паспорте.</p>
+
+      <ul class="doc-list">
+        <li><span>Гарантийный срок эксплуатации составляет <strong>12 месяцев</strong> с момента передачи изделия Потребителю. Срок службы изделия — <strong>150 лет</strong>.</span></li>
+        <li><span>В течение гарантийного срока Предприятие-изготовитель безвозмездно ремонтирует или производит замену изделия либо его составных частей в случае выявления неисправности, при условии соблюдения Потребителем правил транспортировки, хранения и эксплуатации.</span></li>
+        <li><span>Гарантия распространяется исключительно на дефекты производственного характера, возникшие по вине изготовителя.</span></li>
+        <li><span>Внешний вид изделия должен быть проверен Потребителем при получении. Претензии по внешнему виду, упаковке и комплектации после подписания товарных документов и передачи изделия не принимаются.</span></li>
+        <li><span>Производитель не несёт ответственности за возможные косвенные убытки, связанные с использованием или невозможностью использования изделия.</span></li>
+        <li><span>Срок рассмотрения гарантийной заявки составляет от <strong>14 до 45 рабочих дней</strong> в соответствии с действующим законодательством Российской Федерации.</span></li>
+      </ul>
+
+      <div class="notice-box">
+        <div class="notice-box-icon">
+          <svg viewBox="0 0 24 24" fill="none" style="width:18px;height:18px;">
+            <circle cx="12" cy="12" r="10" stroke="#c9a96e" stroke-width="1.3"/>
+            <line x1="12" y1="8" x2="12" y2="12" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="12" cy="16" r="0.8" fill="#c9a96e"/>
+          </svg>
+        </div>
+        <div>
+          <div class="notice-box-title">Сохраняйте документы</div>
+          <div class="notice-box-text">Сохраняйте товарный чек и упаковочные документы на протяжении всего гарантийного срока. <strong>При отсутствии товарного чека или товарной накладной</strong> гарантийная претензия в соответствии с действующим законодательством может быть оставлена без рассмотрения.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ОГРАНИЧЕНИЯ -->
+    <div class="doc-section" id="exclusions">
+      <div class="doc-section-label">Раздел 3</div>
+      <h2 class="doc-section-title">Ограничения <em>гарантии</em></h2>
+
+      <p class="doc-text">Гарантийные обязательства не распространяются на случаи, перечисленные ниже. Производитель не принимает претензии по качеству продукции в следующих ситуациях:</p>
+
+      <div class="two-col">
+        <div class="col-block">
+          <div class="col-block-title">Не гарантийные случаи</div>
+          <ul class="doc-bullets">
+            <li><span>Нарушение правил эксплуатации, хранения, транспортировки или монтажа изделия</span></li>
+            <li><span>Механические повреждения (потёртости, царапины, сколы, трещины), возникшие после передачи изделия Потребителю</span></li>
+            <li><span>Воздействие агрессивных химических веществ, не предусмотренных условиями эксплуатации</span></li>
+            <li><span>Естественный износ изделия вследствие длительной эксплуатации</span></li>
+            <li><span>Самостоятельный ремонт, доработка или внесение изменений в конструкцию изделия</span></li>
+          </ul>
+        </div>
+        <div class="col-block">
+          <div class="col-block-title">Условия транспортировки</div>
+          <ul class="doc-bullets">
+            <li><span>Самостоятельная транспортировка изделия в транспортных средствах, не предназначенных для перевозки мебели</span></li>
+            <li><span>Повреждения, возникшие при нарушении условий транспортировки, указанных производителем</span></li>
+            <li><span>Повреждения упаковки и изделия, выявленные после подписания товарно-транспортных документов без соответствующих оговорок</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ПОДГОТОВКА -->
+    <div class="doc-section" id="before-use">
+      <div class="doc-section-label">Раздел 4</div>
+      <h2 class="doc-section-title">Подготовка к <em>эксплуатации</em></h2>
+
+      <p class="doc-text">Перед началом использования изделия необходимо проверить его целостность и внешний вид. Осмотр проводится в присутствии представителя доставки до подписания приёмочных документов.</p>
+
+      <p class="doc-text">В случае выявления дефектов при получении, просим незамедлительно:</p>
+
+      <ul class="doc-bullets" style="margin-bottom:24px;">
+        <li><span>Зафиксировать обнаруженный недостаток в акте приёмки и отказаться от подписания документов без соответствующей оговорки</span></li>
+        <li><span>Подробно описать обнаруженный дефект в письменном виде</span></li>
+        <li><span>Выполнить фотофиксацию дефектного участка изделия с нескольких ракурсов</span></li>
+        <li><span>Направить фотографии вместе с описанием и номером товарной накладной на электронную почту <strong style="color:var(--text);">bars.furniture@mail.ru</strong></span></li>
+        <li><span>Указать контактный номер телефона для обратной связи</span></li>
+      </ul>
+
+      <div class="notice-box">
+        <div class="notice-box-icon">
+          <svg viewBox="0 0 24 24" fill="none" style="width:18px;height:18px;">
+            <path d="M12 2L2 20h20L12 2Z" stroke="#c9a96e" stroke-width="1.3" stroke-linejoin="round"/>
+            <line x1="12" y1="9" x2="12" y2="14" stroke="#c9a96e" stroke-width="1.3" stroke-linecap="round"/>
+            <circle cx="12" cy="17" r="0.8" fill="#c9a96e"/>
+          </svg>
+        </div>
+        <div>
+          <div class="notice-box-title">Важно при подаче претензии</div>
+          <div class="notice-box-text">При отсутствии необходимой документации и фотоматериалов производитель вправе оставить обращение без рассмотрения. Срок рассмотрения заявки составляет от <strong>14 до 45 рабочих дней</strong> в соответствии с действующим законодательством РФ.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ПРАВИЛА ЭКСПЛУАТАЦИИ -->
+    <div class="doc-section" id="rules">
+      <div class="doc-section-label">Раздел 5</div>
+      <h2 class="doc-section-title">Правила <em>эксплуатации</em></h2>
+
+      <p class="doc-text">Нержавеющая сталь AISI 304 — долговечный материал, не требующий сложного ухода. Соблюдение приведённых рекомендаций обеспечивает сохранение внешнего вида и эксплуатационных характеристик изделия на протяжении всего заявленного срока службы.</p>
+
+      <div class="two-col">
+        <div class="col-block">
+          <div class="col-block-title">Рекомендуется</div>
+          <ul class="doc-bullets">
+            <li><span>Регулярно очищать поверхность мягкой тканью или микрофиброй с использованием неабразивных моющих средств</span></li>
+            <li><span>При появлении незначительных царапин или потускнения применять специализированные средства для ухода за нержавеющей сталью</span></li>
+            <li><span>После мытья протирать поверхность насухо мягкой тканью</span></li>
+            <li><span>При длительном хранении в межсезонье накрывать изделие защитным чехлом</span></li>
+          </ul>
+        </div>
+        <div class="col-block">
+          <div class="col-block-title">Запрещается</div>
+          <ul class="doc-bullets">
+            <li><span>Использовать жёсткие щётки, металлические губки и абразивные чистящие материалы</span></li>
+            <li><span>Применять хлорсодержащие и агрессивные химические средства</span></li>
+            <li><span>Допускать длительный контакт поверхности с водой, содержащей повышенное количество солей или хлора</span></li>
+            <li><span>Оставлять на поверхности изделия инструменты и предметы из чёрного металла — при намокании возможен перенос частиц ржавчины</span></li>
+            <li><span>При эксплуатации вблизи моря допускать длительное воздействие солёной воды и морского воздуха без периодической очистки</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="notice-box">
+        <div class="notice-box-icon">
+          <svg viewBox="0 0 24 24" fill="none" style="width:18px;height:18px;">
+            <circle cx="12" cy="12" r="10" stroke="#c9a96e" stroke-width="1.3"/>
+            <line x1="12" y1="8" x2="12" y2="12" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="12" cy="16" r="0.8" fill="#c9a96e"/>
+          </svg>
+        </div>
+        <div>
+          <div class="notice-box-title">О пятнах ржавчины</div>
+          <div class="notice-box-text">Изделие не имеет покрытий — коррозионная стойкость обеспечивается свойствами самого материала AISI 304. Необходимо избегать контакта с чёрным металлом: если оставить на поверхности гвоздь или инструмент, при намокании возможно образование пятен ржавчины за счёт переноса частиц чёрного металла. Также следует беречь изделие от попадания брызг при сварке или резке металла поблизости. <strong>Пятна ржавчины убираются специальными составами для нержавеющей стали.</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ВАЖНО -->
+    <div class="doc-section" id="important">
+      <div class="doc-section-label">Раздел 6</div>
+      <h2 class="doc-section-title"><em>Важная</em> информация</h2>
+
+      <ul class="doc-bullets">
+        <li><span>Изображения изделий и вариантов отделки, представленные на сайте и в каталоге, могут незначительно отличаться от фактического внешнего вида в связи с особенностями цветопередачи фотографического оборудования и экранов.</span></li>
+        <li><span>Производитель оставляет за собой право без предварительного уведомления вносить изменения в конструкцию, комплектацию и технологию изготовления изделий с целью их совершенствования. Указанные изменения не ухудшают потребительских свойств и эксплуатационных характеристик продукции.</span></li>
+        <li><span>Все споры, возникающие в связи с исполнением гарантийных обязательств, разрешаются в соответствии с действующим законодательством Российской Федерации.</span></li>
+        <li><span>Настоящие условия гарантии являются неотъемлемой частью договора купли-продажи и распространяются на все изделия, произведённые под торговой маркой BARS FURNITURE.</span></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-text">
+    <h2>Остались <em>вопросы?</em></h2>
+    <p>Свяжитесь с нами — ответим на любые вопросы по гарантии, доставке и эксплуатации изделий в течение часа в рабочее время.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="https://t.me/BarsFurniture" class="btn-primary" target="_blank">Написать в Telegram</a>
+    <div class="messenger-links">
+      <a href="https://max.ru/u/f9LHodD0cOIXya3dJ3dM1AZYDFz_z14JZbrOJPO9oWI-qJNMZlWwAlf7dEM" class="messenger-btn" target="_blank">
+        <img src="Иконки/Логотип_MAX.svg.png" alt="MAX" style="width:16px;height:16px;border-radius:4px;filter:grayscale(1) brightness(1.4);opacity:0.7;"> MAX
+      </a>
+      <a href="mailto:bars.furniture@mail.ru" class="messenger-btn">@ bars.furniture@mail.ru</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <img src="Эмблема нашей компании (Без текста).webp" alt="BARS FURNITURE" />
+    <p class="footer-tagline">
+      Премиальная уличная мебель<br/>
+      из нержавеющей стали AISI 304.<br/>
+      Ручное производство. Made in Russia.
+    </p>
+  </div>
+  <div class="footer-links">
+    <h4>Коллекция</h4>
+    <ul>
+      <li><span><a href="stool.html">Кресло</a></span></li>
+      <li><span><a href="table.html">Стол</a></span></li>
+      <li><span><a href="bench.html">Скамейка</a></span></li>
+      <li><span><a href="hammock.html">Подвес для гамака</a></span></li>
+      <li><span><a href="container.html">Контейнер</a></span></li>
+      <li><span><a href="chair.html">Табурет</a></span></li>
+    </ul>
+  </div>
+  <div class="footer-links">
+    <h4>Компания</h4>
+    <ul>
+      <li><span><a href="front.html#about">О производстве</a></span></li>
+      <li><span><a href="front.html#b2b">Для бизнеса (B2B)</a></span></li>
+      <li><span><a href="front.html#contact">Контакты</a></span></li>
+      <li><span><a href="gid.html">Гарантия</a></span></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 BARS FURNITURE. Все права защищены.</span>
+    <span>Нержавеющая сталь AISI 304 · Made in Russia</span>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  function closeMenu() {
+    burger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !burger.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) closeMenu();
+  });
+</script>
+</body>
+</html>
