@@ -749,6 +749,8 @@
       cursor: pointer;
       padding: 8px;
       z-index: 1001;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
     }
     .burger span {
       display: block;
@@ -1346,7 +1348,8 @@
   const burger = document.getElementById('burger');
   const mobileMenu = document.getElementById('mobileMenu');
 
-  burger.addEventListener('click', () => {
+  burger.addEventListener('click', (e) => {
+    e.stopPropagation();
     burger.classList.toggle('open');
     mobileMenu.classList.toggle('open');
     document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
@@ -1427,8 +1430,4 @@
   const nav = document.querySelector('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      nav.style.borderBottomColor = 'rgba(201,169,110,0.15)';
-    } else {
-      nav.style.borderBottomColor = 'rgba(255,255,255,0.08)';
-    }
-  });
+      nav.style.borderBottomColor = 'rgba
