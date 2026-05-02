@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BARS FURNITURE — Мебель из нержавеющей стали AISI 304</title>
+  <meta name="description" content="Премиальная уличная мебель из нержавеющей стали AISI 304. Ручное производство в России. Кресла, столы, скамейки, подвесы для гамаков. От 90 000 ₽." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { max-width: 100%; height: auto; }
+
+    :root {
+      --bg: #0c0b09;
+      --surface: #131210;
+      --surface2: #1a1815;
+      --text: #f0ede8;
+      --text-muted: #8a857c;
+      --accent: #c9a96e;
+      --accent-dark: #a8844a;
+      --border: rgba(255,255,255,0.08);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 72px;
+      background: rgba(12,11,9,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+      filter: invert(1);
+      opacity: 0.9;
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .nav-logo-text span:first-child {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: var(--text);
+      text-transform: uppercase;
+    }
+
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent) !important;
+      padding: 8px 20px;
+      border-radius: 2px;
+      font-size: 12px !important;
+      letter-spacing: 0.12em !important;
+      transition: all 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent) !important;
+      color: var(--bg) !important;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      padding: 72px 0 0;
+    }
+
+    .hero-content {
+      padding: 80px 48px 80px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 6vw, 88px);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 380px;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      padding: 14px 32px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover { background: #d4b47a; transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      transition: color 0.2s;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .btn-ghost:hover { color: var(--text); }
+    .btn-ghost::after { content: '→'; transition: transform 0.2s; }
+    .btn-ghost:hover::after { transform: translateX(4px); }
+
+    .hero-image {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image > img:first-child {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.9);
+    }
+
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--bg) 0%, transparent 30%);
+      z-index: 1;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      padding-top: 8px;
+    }
+
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hero-stat-num {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ── TICKER STRIP ── */
+    .ticker {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 14px 0;
+      background: var(--surface);
+    }
+
+    .ticker-inner {
+      display: inline-flex;
+      animation: ticker 25s linear infinite;
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 24px;
+      padding: 0;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .ticker-item span {
+      color: var(--accent);
+      font-size: 14px;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── SECTION COMMONS ── */
+    section { padding: 100px 80px; }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    /* ── CATALOG ── */
+    .catalog { background: var(--surface); }
+
+    .catalog-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 56px;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+
+    .product-card {
+      background: var(--bg);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      group: true;
+    }
+
+    .product-card:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .product-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      filter: brightness(0.85);
+    }
+
+    .product-card:first-child .product-img {
+      aspect-ratio: unset;
+      height: 100%;
+    }
+
+    .product-card:hover .product-img { transform: scale(1.04); filter: brightness(0.95); }
+
+    .product-info {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 24px;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+      transform: translateY(8px);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover .product-info { transform: translateY(0); }
+
+    .product-name {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    .product-price {
+      font-size: 13px;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-top: 12px;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    .product-link:hover { color: var(--text); }
+
+    /* placeholder cards for missing images */
+    .product-placeholder {
+      background: var(--surface2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+    }
+
+    .product-placeholder-icon {
+      font-size: 40px;
+      opacity: 0.2;
+    }
+
+    /* ── ABOUT ── */
+    .about-section { padding: 100px 80px; }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .about-text p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .feature-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .feature-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── B2B ── */
+    .b2b {
+      background: var(--surface2);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 0;
+      min-height: 480px;
+    }
+
+    .b2b-content {
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .b2b-image {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .b2b-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6) saturate(0.8);
+      transition: transform 0.5s;
+    }
+
+    .b2b-image:hover img { transform: scale(1.03); }
+
+    .b2b-clients {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .b2b-client-tag {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      background: var(--surface);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .contact-text {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      transition: color 0.2s;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-method:hover { color: var(--accent); }
+
+    .contact-method-icon {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .form-input, .form-textarea {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      padding: 12px 16px;
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 48px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .footer-brand img {
+      height: 36px;
+      filter: invert(1);
+      opacity: 0.7;
+      margin-bottom: 16px;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .footer-links h4 {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-bottom {
+      grid-column: 1 / -1;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ── SCROLL ANIMATION ── */
+    @keyframes fadeUpFallback {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+      animation: fadeUpFallback 0.7s ease 1.5s forwards;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+      animation: none;
+    }
+
+    /* ── SUCCESS MESSAGE ── */
+    .success-msg {
+      display: none;
+      background: rgba(201,169,110,0.1);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 14px 20px;
+      border-radius: 2px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    /* BURGER */
+    .burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+    .burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: rgba(12,11,9,0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+      padding: 24px 20px 32px;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-menu .menu-cta {
+      margin-top: 16px;
+      background: var(--accent);
+      color: var(--bg) !important;
+      text-align: center;
+      padding: 14px 20px;
+      border-radius: 2px;
+      border: none;
+      font-weight: 600;
+    }
+
+    
+    @media (max-width: 1100px) {
+      nav { padding: 0 24px; }
+      .nav-links { gap: 20px; }
+      .nav-links a { font-size: 12px; letter-spacing: 0.05em; }
+      .nav-cta { padding: 7px 14px; font-size: 11px !important; }
+      .nav-logo img { height: 36px; }
+      .nav-logo-text span:first-child { font-size: 13px; }
+    }
+
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .burger { display: flex; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 16px; }
+      .nav-logo img { height: 30px; }
+      .nav-logo-text span:first-child { font-size: 12px; }
+
+      /* HERO */
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 72px; }
+      .hero-content { padding: 40px 20px 36px; }
+      .hero-visual { display: none; }
+      .hero-image { display: none; }
+      .hero-badge { font-size: 10px; }
+      .hero-stats { gap: 20px; flex-wrap: wrap; }
+      .hero-stat-num { font-size: 26px; }
+      .hero-stat-label { font-size: 10px; }
+      .hero-subtitle { font-size: 14px; max-width: 100%; }
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .btn-primary { width: 100%; justify-content: center; padding: 16px 24px; }
+
+      /* CATALOG */
+      .catalog { padding: 48px 16px; }
+      .catalog-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .catalog-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+      .product-card:first-child { grid-column: span 2; grid-row: span 1; }
+      .product-card:first-child .product-img { height: 240px; }
+      .product-img { aspect-ratio: 1; }
+      .product-name { font-size: 14px; }
+      .product-price { font-size: 13px; }
+      .product-link { font-size: 11px; }
+      .product-info { padding: 16px; }
+
+      /* ABOUT */
+      .about-section { padding: 48px 16px; }
+      .about { grid-template-columns: 1fr; gap: 32px; }
+      .about-features { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .feature { padding: 20px 16px; }
+      .feature-title { font-size: 13px; }
+      .feature-desc { font-size: 12px; }
+      .section-title { font-size: clamp(32px, 8vw, 48px); }
+
+      /* B2B */
+      .b2b { grid-template-columns: 1fr; min-height: auto; }
+      .b2b-content { padding: 40px 16px; }
+      .b2b-image { height: 220px; }
+      .b2b-image img { width: 100%; height: 100%; object-fit: cover; }
+
+      /* CONTACT */
+      .contact { grid-template-columns: 1fr; gap: 32px; padding: 48px 16px; }
+      .contact-info { padding-right: 0; }
+
+      /* FOOTER */
+      footer { grid-template-columns: 1fr; padding: 40px 16px; gap: 24px; }
+      .footer-bottom { flex-direction: column; gap: 8px; font-size: 11px; }
+      .footer-brand img { height: 28px; }
+
+      /* FORM — prevent iOS zoom (min 16px) */
+      .form-row { grid-template-columns: 1fr; }
+      .form-input, .form-textarea, .form-select { font-size: 16px; }
+
+      /* TICKER */
+      .ticker-item { gap: 16px; font-size: 10px; }
+    }
+
+    @media (max-width: 420px) {
+      .catalog-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+      .product-card:first-child { grid-column: span 2; grid-row: span 1; }
+      .product-card:first-child .product-img { height: 200px; }
+      .hero-content { padding: 32px 16px 28px; }
+      .hero-stat-num { font-size: 22px; }
+      .about-features { grid-template-columns: 1fr; }
+      .hero-stats { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="front.html" class="nav-logo">
+    <img src="Эмблема нашей компании (Без текста).webp" alt="BARS FURNITURE" />
+    <div class="nav-logo-text">
+      <span>Bars Furniture</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#catalog">Коллекция</a></li>
+    <li><a href="#about">О нас</a></li>
+    <li><a href="#b2b">B2B</a></li>
+    <li><a href="gid.html">Доставка и гарантия</a></li>
+    <li><a href="#contact" class="nav-cta">Получить каталог</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#catalog" onclick="closeMenu()">Коллекция</a>
+  <a href="#about" onclick="closeMenu()">О нас</a>
+  <a href="#b2b" onclick="closeMenu()">B2B</a>
+  <a href="gid.html">Доставка и гарантия</a>
+  <a href="#contact" class="menu-cta" onclick="closeMenu()">Получить каталог</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Нержавеющая сталь AISI 304 · Made in Russia</div>
+
+    <h1 class="hero-title">
+      Мебель,<br/>
+      которая<br/>
+      <em>переживёт</em><br/>
+      десятилетия
+    </h1>
+
+    <p class="hero-subtitle">
+      Премиальная уличная мебель ручного производства.
+      Каждое изделие создаётся под заказ — без конвейера,
+      без компромиссов.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#catalog" class="btn-primary">Смотреть коллекцию</a>
+      <a href="#contact" class="btn-ghost">Узнать стоимость</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">15+</span>
+        <span class="hero-stat-label">лет опыта</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">304</span>
+        <span class="hero-stat-label">AISI сталь</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">100%</span>
+        <span class="hero-stat-label">ручная работа</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="image%20(1).webp" alt="Кресло BARS FURNITURE из нержавеющей стали" />
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <div class="ticker-item"><span>✦</span> Нержавеющая сталь AISI 304 <span>✦</span> Ручное производство <span>✦</span> Россия <span>✦</span> Без коррозии <span>✦</span> Гарантия <span>✦</span> Под заказ <span>✦</span> Срок эксплуатации более 150 лет <span>✦</span> B2B доступно </div>
+    <div class="ticker-item"><span>✦</span> Нержавеющая сталь AISI 304 <span>✦</span> Ручное производство <span>✦</span> Россия <span>✦</span> Без коррозии <span>✦</span> Гарантия <span>✦</span> Под заказ <span>✦</span> Срок эксплуатации более 150 лет <span>✦</span> B2B доступно </div>
+  </div>
+</div>
+
+<!-- CATALOG -->
+<section class="catalog" id="catalog">
+  <div class="catalog-header fade-up">
+    <div>
+      <div class="section-label">Коллекция</div>
+      <h2 class="section-title">Шесть <em>изделий</em><br/>одного характера</h2>
+    </div>
+    <a href="#contact" class="btn-ghost">Полный каталог с ценами</a>
+  </div>
+
+  <div class="catalog-grid fade-up">
+
+    <!-- Кресло — большая карточка -->
+    <div class="product-card" onclick="location.href='stool.html'" style="cursor:pointer;">
+      <img src="image%20(1).webp" alt="Кресло" class="product-img" style="height:100%; object-fit:cover;" />
+      <div class="product-info">
+        <div class="product-name">Кресло</div>
+        <div class="product-price">от 120 000 ₽</div>
+        <a href="stool.html" class="product-link">Узнать подробнее →</a>
+      </div>
+    </div>
+
+    <!-- Скамейка -->
+    <div class="product-card" onclick="location.href='bench.html'" style="cursor:pointer;">
+      <img src="image%20(11)%20(1).webp" alt="Скамейка" class="product-img" />
+      <div class="product-info">
+        <div class="product-name">Скамейка</div>
+        <div class="product-price">от 120 000 ₽</div>
+        <a href="bench.html" class="product-link">Узнать подробнее →</a>
+      </div>
+    </div>
+
+    <!-- Подвес для гамака -->
+    <div class="product-card" onclick="location.href='hammock.html'" style="cursor:pointer;">
+      <img src="Подвес.webp" alt="Подвес для гамака" class="product-img" />
+      <div class="product-info">
+        <div class="product-name">Подвес для гамака</div>
+        <div class="product-price">от 130 000 ₽</div>
+        <a href="hammock.html" class="product-link">Узнать подробнее →</a>
+      </div>
+    </div>
+
+    <!-- Контейнер -->
+    <div class="product-card" onclick="location.href='container.html'" style="cursor:pointer;">
+      <img src="image%20(12)%20(1).webp" alt="Контейнер" class="product-img" />
+      <div class="product-info">
+        <div class="product-name">Контейнер</div>
+        <div class="product-price">от 90 000 ₽</div>
+        <a href="container.html" class="product-link">Узнать подробнее →</a>
+      </div>
+    </div>
+
+    <!-- Стол -->
+    <div class="product-card" onclick="location.href='table.html'" style="cursor:pointer;">
+      <img src="Стол.webp" alt="Стол" class="product-img" />
+      <div class="product-info">
+        <div class="product-name">Стол</div>
+        <div class="product-price">от 220 000 ₽</div>
+        <a href="table.html" class="product-link">Узнать подробнее →</a>
+      </div>
+    </div>
+
+    <!-- Табурет -->
+    <div class="product-card" onclick="location.href='chair.html'" style="cursor:pointer;">
+      <img src="Табуретка.webp" alt="Табурет" class="product-img" />
+      <div class="product-info">
+        <div class="product-name">Табурет</div>
+        <div class="product-price">от 90 000 ₽</div>
+        <a href="chair.html" class="product-link">Узнать подробнее →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="about">
+    <div class="about-text fade-up">
+      <div class="section-label">О производстве</div>
+      <h2 class="section-title">Сделано <em>вручную</em><br/>в России</h2>
+      <p>
+        Мы работаем с <strong>2010 года</strong>. За это время накопили опыт работы
+        с промышленными и пищевыми предприятиями, где требования к качеству
+        нержавеющей стали максимальны.
+      </p>
+      <p>
+        <strong>Каждое изделие изготавливается вручную</strong> — без конвейерной сборки.
+        Сатинирование выполняется в специальной камере. Мы не работаем
+        со складскими остатками — вся мебель создаётся под ваш заказ.
+      </p>
+      <p>
+        Сталь <strong>AISI 304</strong> — промышленный стандарт с высокой
+        устойчивостью к коррозии, перепадам температур и прямым осадкам.
+        Ваша мебель будет выглядеть так же через 20 лет.
+      </p>
+      <a href="#contact" class="btn-primary" style="margin-top:16px; display:inline-flex;">
+        Получить консультацию
+      </a>
+    </div>
+
+    <div class="about-features fade-up">
+
+      <!-- AISI 304 — атомная решётка -->
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="5" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.08)"/>
+            <circle cx="24" cy="7"  r="3" stroke="#8a857c" stroke-width="1"/>
+            <circle cx="24" cy="41" r="3" stroke="#8a857c" stroke-width="1"/>
+            <circle cx="7"  cy="24" r="3" stroke="#8a857c" stroke-width="1"/>
+            <circle cx="41" cy="24" r="3" stroke="#8a857c" stroke-width="1"/>
+            <circle cx="11" cy="11" r="2.5" stroke="#8a857c" stroke-width="0.9" opacity="0.6"/>
+            <circle cx="37" cy="11" r="2.5" stroke="#8a857c" stroke-width="0.9" opacity="0.6"/>
+            <circle cx="11" cy="37" r="2.5" stroke="#8a857c" stroke-width="0.9" opacity="0.6"/>
+            <circle cx="37" cy="37" r="2.5" stroke="#8a857c" stroke-width="0.9" opacity="0.6"/>
+            <line x1="24" y1="19" x2="24" y2="10" stroke="#3a3830" stroke-width="0.8"/>
+            <line x1="24" y1="29" x2="24" y2="38" stroke="#3a3830" stroke-width="0.8"/>
+            <line x1="19" y1="24" x2="10" y2="24" stroke="#3a3830" stroke-width="0.8"/>
+            <line x1="29" y1="24" x2="38" y2="24" stroke="#3a3830" stroke-width="0.8"/>
+            <line x1="20" y1="20" x2="14" y2="14" stroke="#2e2c29" stroke-width="0.7"/>
+            <line x1="28" y1="20" x2="34" y2="14" stroke="#2e2c29" stroke-width="0.7"/>
+            <line x1="20" y1="28" x2="14" y2="34" stroke="#2e2c29" stroke-width="0.7"/>
+            <line x1="28" y1="28" x2="34" y2="34" stroke="#2e2c29" stroke-width="0.7"/>
+          </svg>
+        </div>
+        <div class="feature-title">Нержавеющая сталь AISI 304</div>
+        <div class="feature-desc">Промышленный стандарт. Максимальная коррозионная стойкость.</div>
+      </div>
+
+      <!-- Ручное производство — молоток + наковальня -->
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Рука / инструмент -->
+            <rect x="18" y="6" width="12" height="7" rx="1" stroke="#c9a96e" stroke-width="1.2"/>
+            <line x1="24" y1="13" x2="24" y2="30" stroke="#c9a96e" stroke-width="1.4"/>
+            <!-- Наковальня -->
+            <rect x="10" y="33" width="28" height="5" rx="1" stroke="#8a857c" stroke-width="1.1"/>
+            <rect x="15" y="38" width="18" height="4" rx="0.5" stroke="#8a857c" stroke-width="0.9"/>
+            <!-- Искры -->
+            <line x1="32" y1="22" x2="36" y2="18" stroke="#c9a96e" stroke-width="0.9" stroke-linecap="round" opacity="0.7"/>
+            <line x1="34" y1="25" x2="39" y2="24" stroke="#c9a96e" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
+            <line x1="31" y1="27" x2="36" y2="29" stroke="#c9a96e" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="feature-title">Ручное производство</div>
+        <div class="feature-desc">Без конвейера. Каждое изделие — под конкретный заказ.</div>
+      </div>
+
+      <!-- Срок службы — бесконечность -->
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="24" y="32" text-anchor="middle"
+                  font-family="Georgia,serif" font-size="36" font-weight="300"
+                  fill="none" stroke="#c9a96e" stroke-width="0.8">∞</text>
+          </svg>
+        </div>
+        <div class="feature-title">Срок службы — десятилетия</div>
+        <div class="feature-desc">Не теряет свойств и внешнего вида под любыми условиями.</div>
+      </div>
+
+      <!-- Минималистичный дизайн — геометрия -->
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Золотой прямоугольник -->
+            <rect x="8" y="10" width="32" height="22" stroke="#c9a96e" stroke-width="1.3"/>
+            <!-- Внутренняя сетка — минимализм -->
+            <line x1="8"  y1="21" x2="40" y2="21" stroke="#3a3830" stroke-width="0.7"/>
+            <line x1="24" y1="10" x2="24" y2="32" stroke="#3a3830" stroke-width="0.7"/>
+            <!-- Ножки как у мебели -->
+            <line x1="14" y1="32" x2="12" y2="42" stroke="#8a857c" stroke-width="1.1"/>
+            <line x1="34" y1="32" x2="36" y2="42" stroke="#8a857c" stroke-width="1.1"/>
+            <!-- Золотая точка пересечения -->
+            <circle cx="24" cy="21" r="2" fill="#c9a96e" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="feature-title">Минималистичный дизайн</div>
+        <div class="feature-desc">Чистые формы. Гармония с современной архитектурой.</div>
+      </div>
+
+      <!-- Полный цикл в России — цикл -->
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Верхняя дуга со стрелкой → -->
+            <path d="M12 20 C12 12 20 7 28 9" stroke="#c9a96e" stroke-width="1.4" stroke-linecap="round"/>
+            <line x1="28" y1="9"  x2="23" y2="6"  stroke="#c9a96e" stroke-width="1.4" stroke-linecap="round"/>
+            <line x1="28" y1="9"  x2="25" y2="14" stroke="#c9a96e" stroke-width="1.4" stroke-linecap="round"/>
+            <!-- Нижняя дуга со стрелкой ← -->
+            <path d="M36 28 C36 36 28 41 20 39" stroke="#8a857c" stroke-width="1.3" stroke-linecap="round"/>
+            <line x1="20" y1="39" x2="25" y2="42" stroke="#8a857c" stroke-width="1.3" stroke-linecap="round"/>
+            <line x1="20" y1="39" x2="23" y2="34" stroke="#8a857c" stroke-width="1.3" stroke-linecap="round"/>
+            <!-- Центральная точка -->
+            <circle cx="24" cy="24" r="3" stroke="#c9a96e" stroke-width="1" fill="rgba(201,169,110,0.1)"/>
+          </svg>
+        </div>
+        <div class="feature-title">Полный цикл в России</div>
+        <div class="feature-desc">Разработка, производство и финишная обработка — у нас.</div>
+      </div>
+
+      <!-- Простой уход — капля -->
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Капля -->
+            <path d="M24 6 C24 6 12 20 12 29 C12 36 17.4 42 24 42 C30.6 42 36 36 36 29 C36 20 24 6 24 6Z"
+                  stroke="#c9a96e" stroke-width="1.3" fill="rgba(201,169,110,0.07)"/>
+            <!-- Блик -->
+            <path d="M18 24 C18 24 17 28 18 32" stroke="#c9a96e" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+            <!-- Галочка внутри -->
+            <line x1="19" y1="30" x2="22" y2="33" stroke="#8a857c" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="22" y1="33" x2="29" y2="25" stroke="#8a857c" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="feature-title">Простой уход</div>
+        <div class="feature-desc">Гладкая поверхность не впитывает загрязнения. Протёр — готово.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- B2B -->
+<div class="b2b" id="b2b">
+  <div class="b2b-content fade-up">
+    <div class="section-label">Для бизнеса</div>
+    <h2 class="section-title">Решения<br/>для <em>HoReCa</em><br/>и застройщиков</h2>
+    <p style="color:var(--text-muted); font-size:15px; line-height:1.8; font-weight:300; max-width:440px;">
+      Рестораны, отели, частные клубы, коттеджные посёлки.
+      Мы изготавливаем мебель партиями с единым дизайном-кодом
+      под ваш объект — от 3 единиц.
+    </p>
+    <div class="b2b-clients">
+      <div class="b2b-client-tag">Рестораны</div>
+      <div class="b2b-client-tag">Отели</div>
+      <div class="b2b-client-tag">Застройщики</div>
+      <div class="b2b-client-tag">Частные клубы</div>
+    </div>
+    <a href="#contact" class="btn-primary" style="margin-top:8px; width:fit-content;">
+      Обсудить проект
+    </a>
+  </div>
+  <div class="b2b-image">
+    <img src="image%20(11)%20(1).webp" alt="B2B решения BARS FURNITURE" />
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-info fade-up">
+    <div>
+      <div class="section-label">Контакты</div>
+      <h2 class="section-title">Обсудим<br/>ваш <em>проект</em></h2>
+    </div>
+    <p class="contact-text">
+      Оставьте заявку — мы свяжемся в течение часа,
+      ответим на вопросы и пришлём полный каталог с ценами и характеристиками.
+    </p>
+    <div class="contact-methods">
+      <a href="https://t.me/BarsFurniture" class="contact-method" target="_blank">
+        <div class="contact-method-icon">✈</div>
+        <div>
+          <div style="font-weight:500;">Telegram</div>
+          <div style="font-size:12px; color:var(--text-muted);">Напишите нам в Telegram</div>
+        </div>
+      </a>
+      <a href="https://max.ru/u/f9LHodD0cOIXya3dJ3dM1AZYDFz_z14JZbrOJPO9oWI-qJNMZlWwAlf7dEM" class="contact-method" target="_blank">
+        <div class="contact-method-icon" style="overflow:hidden; padding:0;">
+          <img src="Иконки/Логотип_MAX.svg.png" alt="MAX"
+               style="width:100%; height:100%; object-fit:cover; border-radius:50%;
+                      filter: grayscale(1) brightness(1.4); opacity:0.7;" />
+        </div>
+        <div>
+          <div style="font-weight:500;">MAX</div>
+          <div style="font-size:12px; color:var(--text-muted);">Напишите нам в MAX</div>
+        </div>
+      </a>
+      <a href="mailto:bars.furniture@mail.ru" class="contact-method">
+        <div class="contact-method-icon">@</div>
+        <div>
+          <div style="font-weight:500;">Написать на почту</div>
+          <div style="font-size:12px; color:var(--text-muted);">bars.furniture@mail.ru</div>
+        </div>
+      </a>
+      <div class="contact-method" style="cursor:default;">
+        <div class="contact-method-icon">◷</div>
+        <div>
+          <div style="font-weight:500;">График работы</div>
+          <div style="font-size:12px; color:var(--text-muted);">Пн–Чт: 9:00–18:00 · Пт: 9:00–16:45 · Сб–Вс: выходной</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form fade-up">
+    <form id="leadForm" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label class="form-label">Ваше имя</label>
+        <input type="text" name="name" class="form-input" placeholder="Александр" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Телефон или Telegram</label>
+        <input type="text" name="phone" class="form-input" placeholder="+7 900 000-00-00 или @username" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Что вас интересует?</label>
+        <textarea name="message" class="form-textarea" placeholder="Например: кресло для террасы, 2 штуки. Или: оснащение открытой веранды ресторана..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+        Отправить заявку
+      </button>
+      <p class="form-note">
+        Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+        Мы не передаём данные третьим лицам.
+      </p>
+    </form>
+    <div class="success-msg" id="successMsg">
+      ✓ Заявка отправлена! Свяжемся с вами в течение часа.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <img src="Эмблема нашей компании (Без текста).webp" alt="BARS FURNITURE" />
+    <p class="footer-tagline">
+      Премиальная уличная мебель<br/>
+      из нержавеющей стали AISI 304.<br/>
+      Ручное производство. Made in Russia.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h4>Коллекция</h4>
+    <ul>
+      <li><a href="#catalog">Кресло</a></li>
+      <li><a href="#catalog">Стол</a></li>
+      <li><a href="#catalog">Скамейка</a></li>
+      <li><a href="#catalog">Подвес для гамака</a></li>
+      <li><a href="#catalog">Контейнер</a></li>
+      <li><a href="#catalog">Табурет</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-links">
+    <h4>Компания</h4>
+    <ul>
+      <li><a href="#about">О производстве</a></li>
+      <li><a href="#b2b">Для бизнеса (B2B)</a></li>
+      <li><a href="#contact">Контакты</a></li>
+      <li><a href="https://t.me/BarsFurniture" target="_blank">Telegram</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2010–2026 ООО «Барс». Все права защищены.</span>
+    <span>bars-furniture.ru</span>
+  </div>
+</footer>
+
+<script>
+  // ── SCROLL RESTORATION FIX (mobile browsers restore last scroll position) ──
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
+  // ── BURGER MENU ──
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  function closeMenu() {
+    burger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Закрываем меню при клике вне его
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !burger.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Закрываем меню при изменении размера окна (если вернулись к десктопу)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) closeMenu();
+  });
+
+  // ── SCROLL ANIMATIONS ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Form submit
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('leadForm');
+    const btn = form.querySelector('button[type="submit"]');
+    const msg = document.getElementById('successMsg');
+
+    const name = form.querySelector('[name="name"]').value;
+    const phone = form.querySelector('[name="phone"]').value;
+    const message = form.querySelector('[name="message"]').value;
+
+    btn.disabled = true;
+    btn.textContent = 'Отправка...';
+
+    const now = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
+    const text = `🪑 Новая заявка — BARS FURNITURE\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n💬 Сообщение: ${message || '—'}\n\n🕐 ${now}`;
+
+    try {
+      // Telegram
+      await fetch('https://api.telegram.org/bot8770011427:AAGpfUyixHQ3DzuKqO41CB5OXMM8Ar7nq4I/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: '976722695', text })
+      });
+
+      // Email на bars.furniture@mail.ru
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: '4f03fafa-3b91-43da-93c2-e1811454dfed',
+          subject: '🪑 Новая заявка — BARS FURNITURE',
+          name: name,
+          phone: phone,
+          message: message || '—'
+        })
+      });
+    } catch (err) { console.error('Ошибка отправки:', err); }
+    form.style.display = 'none';
+    msg.style.display = 'block';
+  }
+
+  // ── NAV SCROLL EFFECT ──
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.style.borderBottomColor = 'rgba(201,169,110,0.15)';
+    } else {
+      nav.style.borderBottomColor = 'rgba(255,255,255,0.08)';
+    }
+  });
+</script>
+</body>
+</html>
