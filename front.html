@@ -1340,8 +1340,10 @@
   // ── SCROLL RESTORATION FIX ──
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   window.scrollTo(0, 0);
+</script>
 
-  // ── BURGER MENU ──
+<script>
+  // ── BURGER MENU (isolated script block) ──
   function toggleMenu() {
     var b = document.getElementById('burger');
     var m = document.getElementById('mobileMenu');
@@ -1366,7 +1368,7 @@
   document.addEventListener('click', function(e) {
     var m = document.getElementById('mobileMenu');
     var b = document.getElementById('burger');
-    if (m.classList.contains('open') && !m.contains(e.target) && !b.contains(e.target)) {
+    if (m && b && m.classList.contains('open') && !m.contains(e.target) && !b.contains(e.target)) {
       closeMenu();
     }
   });
@@ -1374,6 +1376,9 @@
   window.addEventListener('resize', function() {
     if (window.innerWidth > 960) closeMenu();
   });
+</script>
+
+<script>
 
   // ── SCROLL ANIMATIONS ──
   const observer = new IntersectionObserver((entries) => {
@@ -1432,6 +1437,4 @@
   const nav = document.querySelector('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      nav.style.borderBottomColor = 'rgba(201,169,110,0.15)';
-    } else {
-   
+     
