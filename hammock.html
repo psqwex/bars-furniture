@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Подвес для гамака из нержавеющей стали AISI 304 — BARS FURNITURE</title>
+  <meta name="description" content="Подвес для гамака из нержавеющей стали AISI 304. Ручное производство, Made in Russia. Устойчив к коррозии и перепадам температур. От 130 000 ₽." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { max-width: 100%; height: auto; }
+    :root {
+      --bg: #0c0b09; --surface: #131210; --surface2: #1a1815;
+      --text: #f0ede8; --text-muted: #8a857c; --accent: #c9a96e;
+      --border: rgba(255,255,255,0.08);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 15px; line-height: 1.6; overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; background: rgba(12,11,9,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo img { height: 44px; filter: invert(1); opacity: 0.9; }
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .nav-logo-text span:first-child {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: transparent; border: 1px solid var(--accent) !important; color: var(--accent) !important; padding: 8px 20px; border-radius: 2px; font-size: 12px !important; transition: all 0.2s !important; }
+    .nav-cta:hover { background: var(--accent) !important; color: var(--bg) !important; }
+
+    .breadcrumb { padding: 100px 80px 0; display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--text-muted); letter-spacing: 0.06em; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--border); }
+    .breadcrumb .current { color: var(--text); }
+
+    .product-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 48px 80px 0; min-height: calc(100vh - 72px); align-items: start; }
+    .product-gallery { position: sticky; top: 88px; padding-right: 60px; }
+    .main-photo { width: 100%; border-radius: 2px; overflow: hidden; background: var(--surface); }
+    .main-photo img { width: 100%; display: block; transition: transform 0.5s ease; }
+    .main-photo:hover img { transform: scale(1.03); }
+    .photo-thumbs { display: flex; gap: 8px; margin-top: 10px; }
+    .thumb { width: 72px; height: 72px; overflow: hidden; border-radius: 2px; border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s; flex-shrink: 0; }
+    .thumb.active { border-color: var(--accent); }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+    .product-info { padding: 0 0 80px 0; display: flex; flex-direction: column; gap: 28px; }
+    .product-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 12px; }
+    .product-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+    .product-title { font-family: var(--font-serif); font-size: clamp(44px, 5vw, 72px); font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; }
+    .product-title em { font-style: italic; color: var(--accent); }
+    .product-price-block { display: flex; align-items: baseline; gap: 16px; padding: 20px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .price-main { font-family: var(--font-serif); font-size: 40px; font-weight: 400; color: var(--text); }
+    .price-note { font-size: 13px; color: var(--text-muted); }
+    .product-desc { font-size: 15px; color: var(--text-muted); line-height: 1.8; font-weight: 300; }
+    .product-desc strong { color: var(--text); font-weight: 500; }
+
+    .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+    .spec-label, .spec-value { padding: 12px 16px; font-size: 15px; border-bottom: 1px solid var(--border); }
+    .spec-label { color: var(--text-muted); font-weight: 400; border-right: 1px solid var(--border); background: var(--surface); }
+    .spec-value { color: var(--text); font-weight: 400; }
+    .spec-label:last-of-type, .spec-value:last-of-type { border-bottom: none; }
+
+    .notice-block { display: flex; gap: 14px; padding: 18px 20px; border: 1px solid rgba(201,169,110,0.25); border-left: 3px solid var(--accent); background: rgba(201,169,110,0.04); border-radius: 2px; }
+    .notice-icon { flex-shrink: 0; padding-top: 2px; }
+    .notice-title { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .notice-text { font-size: 15px; color: var(--text-muted); line-height: 1.75; font-weight: 300; }
+
+    .dims-block { background: var(--surface2); border: 1px solid var(--border); border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+    .dims-header { display: flex; align-items: center; justify-content: space-between; }
+    .dims-title { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+    .dims-download { font-size: 12px; color: var(--accent); text-decoration: none; letter-spacing: 0.05em; transition: opacity 0.2s; }
+    .dims-download:hover { opacity: 0.7; }
+    .dims-svg-wrap { border: 1px solid var(--border); border-radius: 2px; padding: 24px; background: #000; }
+    .drawing-img { width: 100%; display: block; filter: invert(1); opacity: 0.9; }
+    .dims-numbers { display: flex; gap: 0; width: 100%; border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+    .dim-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 14px 8px; border-right: 1px solid var(--border); }
+    .dim-item:last-child { border-right: none; }
+    .dim-axis { font-size: 10px; letter-spacing: 0.15em; color: var(--text-muted); text-transform: uppercase; }
+    .dim-val { font-family: var(--font-serif); font-size: 26px; font-weight: 400; color: var(--accent); line-height: 1; }
+    .dim-unit { font-size: 14px; font-weight: 300; }
+    .dim-lbl { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+
+    .cta-block { display: flex; flex-direction: column; gap: 12px; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--accent); color: var(--bg); padding: 16px 32px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; transition: all 0.25s; border: none; cursor: pointer; width: 100%; }
+    .btn-primary:hover { background: #d4b47a; transform: translateY(-1px); }
+    .cta-note { font-size: 12px; color: var(--text-muted); text-align: center; line-height: 1.5; }
+    .messenger-links { display: flex; gap: 12px; }
+    .messenger-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; border: 1px solid var(--border); border-radius: 2px; text-decoration: none; color: var(--text-muted); font-size: 13px; transition: all 0.2s; }
+    .messenger-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .detail-sections { padding: 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; background: var(--border); }
+    .detail-card { background: var(--surface); padding: 0 0 40px 0; overflow: hidden; }
+    .detail-illustration { width: 100%; height: 160px; background: var(--bg); display: flex; align-items: center; justify-content: center; margin-bottom: 32px; border-bottom: 1px solid var(--border); }
+    .detail-illustration svg { width: 80%; max-width: 260px; }
+    .detail-card-body { padding: 0 36px; }
+    .detail-title { font-family: var(--font-serif); font-size: 26px; font-weight: 400; margin-bottom: 16px; color: var(--text); }
+    .detail-text { font-size: 16px; color: var(--text-muted); line-height: 1.8; font-weight: 300; }
+    .detail-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .detail-list li { font-size: 15px; color: var(--text-muted); display: flex; align-items: flex-start; gap: 10px; line-height: 1.6; }
+    .detail-list li::before { content: '—'; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+
+    .full-photo { height: 60vh; overflow: hidden; position: relative; }
+    .full-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; filter: brightness(0.7); }
+    .full-photo-text { position: absolute; bottom: 60px; left: 80px; right: 80px; }
+    .full-photo-quote { font-family: var(--font-serif); font-size: clamp(28px, 3.5vw, 48px); font-weight: 300; font-style: italic; color: var(--text); max-width: 700px; line-height: 1.2; }
+
+    .form-section { padding: 100px 80px; background: var(--surface); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .form-info h2 { font-family: var(--font-serif); font-size: clamp(32px, 3.5vw, 52px); font-weight: 300; line-height: 1.1; margin-bottom: 24px; }
+    .form-info h2 em { font-style: italic; color: var(--accent); }
+    .form-info p { font-size: 15px; color: var(--text-muted); line-height: 1.8; font-weight: 300; margin-bottom: 16px; }
+    .info-items { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+    .info-item { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text-muted); }
+    .info-item-icon { font-size: 18px; width: 32px; text-align: center; }
+    .form-wrap { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+    .form-input, .form-textarea, .form-select { background: var(--bg); border: 1px solid var(--border); color: var(--text); font-family: var(--font-sans); font-size: 14px; padding: 12px 16px; border-radius: 2px; outline: none; transition: border-color 0.2s; width: 100%; }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--accent); }
+    .form-select option { background: var(--surface); }
+    .form-textarea { resize: vertical; min-height: 100px; }
+    .form-note { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .success-msg { display: none; background: rgba(201,169,110,0.1); border: 1px solid var(--accent); color: var(--accent); padding: 20px; border-radius: 2px; font-size: 14px; text-align: center; line-height: 1.6; }
+
+    .related { padding: 100px 80px; }
+    .related-header { margin-bottom: 48px; }
+    .section-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+    .section-label::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
+    .section-title { font-family: var(--font-serif); font-size: clamp(32px, 3.5vw, 48px); font-weight: 300; line-height: 1.1; }
+    .section-title em { font-style: italic; color: var(--accent); }
+    .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .related-card { background: var(--surface); overflow: hidden; cursor: pointer; text-decoration: none; display: block; }
+    .related-card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; transition: transform 0.4s, filter 0.4s; filter: brightness(0.8); }
+    .related-card:hover img { transform: scale(1.04); filter: brightness(0.95); }
+    .related-card-info { padding: 16px 20px 20px; }
+    .related-card-name { font-family: var(--font-serif); font-size: 20px; font-weight: 400; color: var(--text); }
+    .related-card-price { font-size: 13px; color: var(--accent); margin-top: 4px; }
+
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 48px 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+    .footer-brand img { height: 36px; filter: invert(1); opacity: 0.7; margin-bottom: 16px; }
+    .footer-tagline { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .footer-links h4 { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom { grid-column: 1 / -1; border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    
+    /* BURGER */
+    .burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+    .burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: rgba(12,11,9,0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+      padding: 24px 20px 32px;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-menu .menu-cta {
+      margin-top: 16px;
+      background: var(--accent);
+      color: var(--bg) !important;
+      text-align: center;
+      padding: 14px 20px;
+      border-radius: 2px;
+      border: none;
+      font-weight: 600;
+    }
+
+    
+    @media (max-width: 1100px) {
+      nav { padding: 0 24px; }
+      .nav-links { gap: 20px; }
+      .nav-links a { font-size: 12px; letter-spacing: 0.05em; }
+      .nav-cta { padding: 7px 14px; font-size: 11px !important; }
+      .nav-logo img { height: 36px; }
+      .nav-logo-text span:first-child { font-size: 13px; }
+    }
+
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .burger { display: flex; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 16px; }
+      .nav-logo img { height: 30px; }
+      .nav-logo-text span:first-child { font-size: 12px; }
+
+      .breadcrumb { padding: 80px 16px 0; font-size: 11px; }
+
+      .product-hero { grid-template-columns: 1fr; padding: 20px 20px 0; min-height: auto; }
+      .product-gallery { position: static; padding-right: 0; margin-bottom: 8px; }
+      .product-info { padding: 0 0 40px 0; gap: 20px; }
+
+      .thumb { width: 56px; height: 56px; }
+
+      .product-title { font-size: 42px; }
+      .price-main { font-size: 32px; }
+
+      .specs-grid { font-size: 12px; }
+      .spec-label, .spec-value { padding: 10px 12px; }
+
+      .dims-block { padding: 16px; }
+      .dim-val { font-size: 20px; }
+      .dims-numbers { }
+
+      .messenger-links { flex-wrap: wrap; }
+      .messenger-btn { flex: 1 1 40%; min-width: 120px; }
+
+      .detail-sections { grid-template-columns: 1fr; padding: 40px 20px; gap: 1px; }
+
+      .full-photo { height: 38vh; }
+      .full-photo-text { left: 20px; right: 20px; bottom: 24px; }
+
+      .form-section { grid-template-columns: 1fr; padding: 60px 20px; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-input, .form-textarea, .form-select { font-size: 16px; }
+
+      .related { padding: 60px 20px; }
+      .related-grid { grid-template-columns: 1fr 1fr; }
+
+      footer { grid-template-columns: 1fr; padding: 40px 16px; gap: 24px; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+      /* Изображения */
+      img { max-width: 100%; }
+      .main-photo { height: auto !important; }
+      .main-photo img { width: 100%; height: auto; max-height: 60vw; object-fit: cover; }
+      .full-photo { height: 35vh; min-height: 200px; }
+      .full-photo img { width: 100%; height: 100%; object-fit: cover; }
+      .b2b-image img, .related-card img { width: 100%; height: 100%; object-fit: cover; }
+
+      /* Текст */
+      .section-title { font-size: clamp(28px, 7vw, 44px) !important; }
+      .product-title { font-size: 36px !important; }
+      .price-main { font-size: 28px !important; }
+
+      /* Отступы */
+      .product-hero { gap: 0; }
+      .detail-section { padding: 28px 16px !important; }
+
+    }
+
+    @media (max-width: 420px) {
+      .product-info { padding: 0 0 32px 0; }
+      .btn-primary { padding: 14px 20px; }
+      .messenger-btn { flex: 1 1 100%; }
+      .detail-title { font-size: 20px; }
+      .product-title { font-size: 36px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .messenger-btn { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="front.html" class="nav-logo">
+    <img src="Эмблема нашей компании (Без текста).webp" alt="BARS FURNITURE" />
+    <div class="nav-logo-text">
+      <span>Bars Furniture</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="front.html#catalog">Коллекция</a></li>
+    <li><a href="front.html#about">О нас</a></li>
+    <li><a href="front.html#b2b">B2B</a></li>
+    <li><a href="gid.html">Доставка и гарантия</a></li>
+    <li><a href="#order" class="nav-cta">Заказать</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="front.html#catalog" onclick="closeMenu()">Коллекция</a>
+  <a href="front.html#about" onclick="closeMenu()">О нас</a>
+  <a href="front.html#b2b" onclick="closeMenu()">B2B</a>
+  <a href="gid.html">Доставка и гарантия</a>
+  <a href="#order" class="menu-cta" onclick="closeMenu()">Заказать</a>
+</div>
+
+<div class="breadcrumb">
+  <a href="front.html">Главная</a>
+  <span>/</span>
+  <a href="front.html#catalog">Коллекция</a>
+  <span>/</span>
+  <span class="current">Подвес для гамака</span>
+</div>
+
+<div class="product-hero">
+  <!-- Галерея — 2 фото -->
+  <div class="product-gallery fade-up">
+    <div class="main-photo">
+      <img src="Подвес.webp" alt="Подвес для гамака BARS FURNITURE — нержавеющая сталь AISI 304" id="mainPhoto" />
+    </div>
+    <div class="photo-thumbs">
+      <div class="thumb active" onclick="setPhoto('Подвес.webp', this)">
+        <img src="Подвес.webp" alt="" />
+      </div>
+      <div class="thumb" onclick="setPhoto('%D0%9F%D0%BE%D0%B4%D0%B2%D0%B5%D1%81%202.webp', this)">
+        <img src="%D0%9F%D0%BE%D0%B4%D0%B2%D0%B5%D1%81%202.webp" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="product-info fade-up">
+    <div class="product-label">Коллекция BARS · Арт. BARS-04</div>
+
+    <h1 class="product-title">
+      Подвес<br/><em>для гамака</em>
+    </h1>
+
+    <div class="product-price-block">
+      <div class="price-main">130 000 ₽</div>
+      <div class="price-note">под заказ · срок 3–4 недели</div>
+    </div>
+
+    <p class="product-desc">
+      Подвес для гамака из нержавеющей стали — надёжное решение для комфортного отдыха
+      на открытом воздухе. <strong>Минималистичная форма</strong> органично вписывается
+      в загородное пространство. Каждое изделие изготавливается вручную, с вниманием
+      к деталям и качеству исполнения.
+    </p>
+
+    <p class="product-desc">
+      Выполнен из стали <strong>AISI 304</strong>. Конструкция обеспечивает устойчивую поддержку
+      и рассчитана на длительное использование. Материал устойчив к коррозии, влаге
+      и перепадам температур, не требует сложного ухода.
+      <strong>Сатинированная поверхность</strong> (стеклошариковая обработка) формирует
+      матовую текстуру с аккуратным внешним видом.
+    </p>
+
+    <div class="specs-grid">
+      <div class="spec-label">Материал</div>
+      <div class="spec-value">Нержавеющая сталь AISI 304</div>
+      <div class="spec-label">Обработка</div>
+      <div class="spec-value">Сатинирование (стеклошариковая)</div>
+      <div class="spec-label">Производство</div>
+      <div class="spec-value">Россия, ручная работа</div>
+      <div class="spec-label">Применение</div>
+      <div class="spec-value">Сад, терраса, патио, беседка</div>
+      <div class="spec-label">Температурный диапазон</div>
+      <div class="spec-value">от −40°С до +60°С</div>
+      <div class="spec-label">Срок изготовления</div>
+      <div class="spec-value">3–4 недели</div>
+      <div class="spec-label">Гарантия</div>
+      <div class="spec-value">12 месяцев</div>
+      <div class="spec-label">Размеры (Ш × Г × В)</div>
+      <div class="spec-value">404 × 85 × 154 см</div>
+      <div class="spec-label">Масса</div>
+      <div class="spec-value">40 кг</div>
+    </div>
+
+    <div class="notice-block">
+      <div class="notice-icon">
+        <svg viewBox="0 0 24 24" fill="none" style="width:18px;height:18px;">
+          <path d="M12 2L2 20h20L12 2Z" stroke="#c9a96e" stroke-width="1.3" stroke-linejoin="round"/>
+          <line x1="12" y1="9" x2="12" y2="14" stroke="#c9a96e" stroke-width="1.3" stroke-linecap="round"/>
+          <circle cx="12" cy="17" r="0.8" fill="#c9a96e"/>
+        </svg>
+      </div>
+      <div class="notice-text">
+        <div class="notice-title">Важно знать об уходе</div>
+        Изделие не имеет покрытий — коррозионная стойкость обеспечивается свойствами самого материала AISI 304.
+        Необходимо избегать контакта с чёрным металлом: если оставить на поверхности гвоздь или инструмент,
+        при намокании возможно образование пятен ржавчины.
+        <span style="color:var(--text);font-weight:500;"> Пятна убираются специальными составами для нержавеющей стали.</span>
+      </div>
+    </div>
+
+    <div class="dims-block">
+      <div class="dims-header">
+        <span class="dims-title">Габаритные размеры</span>
+        <a href="подвес-чертеж.pdf" target="_blank" class="dims-download">↓ Скачать чертёж PDF</a>
+      </div>
+      <div class="dims-numbers">
+        <div class="dim-item">
+
+          <span class="dim-val">404 <span class="dim-unit">см</span></span>
+          <span class="dim-lbl">ширина</span>
+        </div>
+        <div class="dim-item">
+
+          <span class="dim-val">85 <span class="dim-unit">см</span></span>
+          <span class="dim-lbl">глубина</span>
+        </div>
+        <div class="dim-item">
+
+          <span class="dim-val">154 <span class="dim-unit">см</span></span>
+          <span class="dim-lbl">высота</span>
+        </div>
+      </div>
+      <div class="dims-svg-wrap">
+        <img src="Чертежи в картинках/подвес-1.png" alt="Чертёж подвеса для гамака с габаритными размерами" class="drawing-img" />
+      </div>
+    </div>
+
+    <div class="cta-block" id="order">
+      <button class="btn-primary" onclick="document.getElementById('formSection').scrollIntoView({behavior:'smooth'})">
+        Оставить заявку
+      </button>
+      <div class="messenger-links">
+        <a href="https://t.me/BarsFurniture" class="messenger-btn" target="_blank">✈ Telegram</a>
+        <a href="https://max.ru/u/f9LHodD0cOIXya3dJ3dM1AZYDFz_z14JZbrOJPO9oWI-qJNMZlWwAlf7dEM" class="messenger-btn" target="_blank">
+          <img src="Иконки/Логотип_MAX.svg.png" alt="MAX" style="width:16px;height:16px;border-radius:4px;filter:grayscale(1) brightness(1.4);opacity:0.7;"> MAX
+        </a>
+        <a href="mailto:bars.furniture@mail.ru" class="messenger-btn">@ Почта</a>
+      </div>
+      <p class="cta-note">Свяжемся в течение часа. Ответим на вопросы и вышлем полный каталог.</p>
+    </div>
+  </div>
+</div>
+
+<!-- DETAIL CARDS -->
+<div class="detail-sections">
+
+  <!-- КАРТОЧКА 1: Материал -->
+  <div class="detail-card fade-up">
+    <div class="detail-illustration">
+      <svg viewBox="0 0 260 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40"  cy="30"  r="4" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.12)"/>
+        <circle cx="100" cy="30"  r="4" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.12)"/>
+        <circle cx="160" cy="30"  r="4" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.12)"/>
+        <circle cx="220" cy="30"  r="4" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.12)"/>
+        <circle cx="70"  cy="70"  r="4" stroke="#8a857c" stroke-width="1" fill="rgba(138,133,124,0.1)"/>
+        <circle cx="130" cy="70"  r="4" stroke="#8a857c" stroke-width="1" fill="rgba(138,133,124,0.1)"/>
+        <circle cx="190" cy="70"  r="4" stroke="#8a857c" stroke-width="1" fill="rgba(138,133,124,0.1)"/>
+        <circle cx="40"  cy="110" r="4" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.12)"/>
+        <circle cx="100" cy="110" r="4" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.12)"/>
+        <circle cx="160" cy="110" r="4" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.12)"/>
+        <circle cx="220" cy="110" r="4" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.12)"/>
+        <line x1="44" y1="30" x2="96" y2="30" stroke="#3a3830" stroke-width="0.8"/>
+        <line x1="104" y1="30" x2="156" y2="30" stroke="#3a3830" stroke-width="0.8"/>
+        <line x1="164" y1="30" x2="216" y2="30" stroke="#3a3830" stroke-width="0.8"/>
+        <line x1="44" y1="110" x2="96" y2="110" stroke="#3a3830" stroke-width="0.8"/>
+        <line x1="104" y1="110" x2="156" y2="110" stroke="#3a3830" stroke-width="0.8"/>
+        <line x1="164" y1="110" x2="216" y2="110" stroke="#3a3830" stroke-width="0.8"/>
+        <line x1="44" y1="32" x2="67" y2="67" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="96" y1="32" x2="73" y2="67" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="104" y1="32" x2="127" y2="67" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="156" y1="32" x2="133" y2="67" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="164" y1="32" x2="187" y2="67" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="216" y1="32" x2="193" y2="67" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="67" y1="73" x2="44" y2="108" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="73" y1="73" x2="96" y2="108" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="127" y1="73" x2="104" y2="108" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="133" y1="73" x2="156" y2="108" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="187" y1="73" x2="164" y2="108" stroke="#2e2c29" stroke-width="0.8"/>
+        <line x1="193" y1="73" x2="216" y2="108" stroke="#2e2c29" stroke-width="0.8"/>
+        <text x="130" y="8" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#c9a96e" letter-spacing="4" opacity="0.8">AISI 304</text>
+      </svg>
+    </div>
+    <div class="detail-card-body">
+      <h3 class="detail-title">Материал без компромиссов</h3>
+      <p class="detail-text">Сталь AISI 304 применяется в пищевой и медицинской промышленности. Для подвеса это означает полную надёжность при любой нагрузке и в любых погодных условиях.</p>
+      <ul class="detail-list">
+        <li>Устойчив к коррозии, влаге и осадкам</li>
+        <li>Не выгорает под ультрафиолетом</li>
+        <li>Выдерживает перепады температур</li>
+        <li>Не требует окраски или специальной обработки</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- КАРТОЧКА 2: Надёжность конструкции -->
+  <div class="detail-card fade-up">
+    <div class="detail-illustration">
+      <svg viewBox="0 0 260 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Перекладина -->
+        <line x1="30" y1="75" x2="230" y2="75" stroke="#c9a96e" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- ГИРЯ — ручка -->
+        <path d="M116 55 Q116 38 130 38 Q144 38 144 55" stroke="#c9a96e" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <!-- ГИРЯ — корпус -->
+        <circle cx="130" cy="63" r="13" stroke="#c9a96e" stroke-width="1.8" fill="rgba(201,169,110,0.10)"/>
+        <!-- ГИРЯ — плоское дно на перекладине -->
+        <line x1="117" y1="75" x2="143" y2="75" stroke="#c9a96e" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Стрелка давления вниз -->
+        <line x1="130" y1="18" x2="130" y2="36" stroke="#8a857c" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+        <line x1="124" y1="30" x2="130" y2="36" stroke="#8a857c" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+        <line x1="136" y1="30" x2="130" y2="36" stroke="#8a857c" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+      </svg>
+    </div>
+    <div class="detail-card-body">
+      <h3 class="detail-title">Надёжная конструкция</h3>
+      <p class="detail-text">Конструкция обеспечивает устойчивую поддержку и рассчитана на длительное использование. Минималистичная форма органично вписывается в загородное пространство.</p>
+      <ul class="detail-list">
+        <li>Устойчивые основания стоек</li>
+        <li>Диагональные распорки для жёсткости</li>
+        <li>Крюки под любой тип гамака</li>
+        <li>Подходит для частного и коммерческого использования</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- КАРТОЧКА 3: Доставка -->
+  <div class="detail-card fade-up">
+    <div class="detail-illustration">
+      <svg viewBox="0 0 260 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="36" cy="55" r="14" stroke="#8a857c" stroke-width="1"/>
+        <text x="36" y="51" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8a857c">01</text>
+        <text x="36" y="62" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8a857c" letter-spacing="0.5">ЗАКАЗ</text>
+        <line x1="36" y1="73" x2="36" y2="86" stroke="#8a857c" stroke-width="0.7" opacity="0.4"/>
+        <text x="36" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#3a3830">День 1</text>
+        <line x1="52" y1="55" x2="98" y2="55" stroke="#3a3830" stroke-width="1" stroke-dasharray="4,3"/>
+        <circle cx="114" cy="55" r="14" stroke="#c9a96e" stroke-width="1.3" fill="rgba(201,169,110,0.06)"/>
+        <rect x="107" y="50" width="14" height="8" rx="0.5" stroke="#c9a96e" stroke-width="0.9"/>
+        <line x1="109" y1="58" x2="109" y2="63" stroke="#c9a96e" stroke-width="0.9"/>
+        <line x1="119" y1="58" x2="119" y2="63" stroke="#c9a96e" stroke-width="0.9"/>
+        <line x1="107" y1="53" x2="121" y2="53" stroke="#c9a96e" stroke-width="0.6" opacity="0.5"/>
+        <line x1="114" y1="73" x2="114" y2="86" stroke="#8a857c" stroke-width="0.7" opacity="0.4"/>
+        <text x="114" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#c9a96e">3–4 нед</text>
+        <line x1="130" y1="55" x2="176" y2="55" stroke="#3a3830" stroke-width="1" stroke-dasharray="4,3"/>
+        <circle cx="192" cy="55" r="14" stroke="#8a857c" stroke-width="1"/>
+        <path d="M192 48 C192 48 185 42 185 38 C185 34 188.3 31.5 192 31.5 C195.7 31.5 199 34 199 38 C199 42 192 48 192 48Z" transform="translate(0 14)" stroke="#8a857c" stroke-width="0.9" fill="rgba(138,133,124,0.08)"/>
+        <circle cx="192" cy="52" r="1.5" fill="#8a857c" opacity="0.7"/>
+        <line x1="192" y1="73" x2="192" y2="86" stroke="#8a857c" stroke-width="0.7" opacity="0.4"/>
+        <text x="192" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#3a3830">Доставка</text>
+        <line x1="208" y1="55" x2="226" y2="55" stroke="#c9a96e" stroke-width="1"/>
+        <line x1="222" y1="51" x2="226" y2="55" stroke="#c9a96e" stroke-width="1"/>
+        <line x1="226" y1="55" x2="222" y2="59" stroke="#c9a96e" stroke-width="1"/>
+        <circle cx="236" cy="55" r="6" stroke="#c9a96e" stroke-width="1.2" fill="rgba(201,169,110,0.12)"/>
+        <line x1="233" y1="55" x2="235" y2="57" stroke="#c9a96e" stroke-width="1.2"/>
+        <line x1="235" y1="57" x2="240" y2="52" stroke="#c9a96e" stroke-width="1.2"/>
+      </svg>
+    </div>
+    <div class="detail-card-body">
+      <h3 class="detail-title">Доставка и установка</h3>
+      <p class="detail-text">Изготавливаем под заказ — каждое изделие делается специально для вас с вниманием к деталям и качеству исполнения.</p>
+      <ul class="detail-list">
+        <li>Срок изготовления 3–4 недели с момента оплаты</li>
+        <li>Доставка по Москве и МО — согласовываем отдельно</li>
+        <li>Доставка по России — транспортными компаниями</li>
+        <li>Готовы обсудить партию для B2B проекта</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- FULL-WIDTH PHOTO -->
+<div class="full-photo">
+  <img src="%D0%9F%D0%BE%D0%B4%D0%B2%D0%B5%D1%81%202.webp" alt="Подвес для гамака BARS FURNITURE" />
+  <div class="full-photo-text">
+    <p class="full-photo-quote">
+      «Надёжность стали —<br/>
+      комфорт отдыха»
+    </p>
+  </div>
+</div>
+
+<!-- FORM SECTION -->
+<div class="form-section" id="formSection">
+  <div class="form-info fade-up">
+    <h2>Хотите этот<br/><em>подвес?</em></h2>
+    <p>
+      Оставьте заявку — мы свяжемся в течение часа, ответим на все вопросы
+      и расскажем про сроки и доставку.
+    </p>
+    <p>
+      Нужен подвес для отеля или базы отдыха? Обсудим объём и условия.
+    </p>
+    <div class="info-items">
+      <div class="info-item">
+        <span class="info-item-icon">◷</span>
+        Ответим в течение часа в рабочее время
+      </div>
+      <div class="info-item">
+        <span class="info-item-icon">◈</span>
+        Пришлём каталог со всеми изделиями и ценами
+      </div>
+      <div class="info-item">
+        <span class="info-item-icon">◎</span>
+        Обсудим доставку и сроки под ваш проект
+      </div>
+      <div class="info-item">
+        <span class="info-item-icon">◷</span>
+        <span>График работы: <span style="color:var(--text-muted); font-weight:300;">Пн–Чт: 9:00–18:00 · Пт: 9:00–16:45 · Сб–Вс: выходной</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-wrap fade-up">
+    <form id="productForm" onsubmit="handleSubmit(event)">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Ваше имя</label>
+            <input type="text" class="form-input" placeholder="Александр" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Телефон</label>
+            <input type="tel" class="form-input" placeholder="+7 900 000-00-00" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Способ связи</label>
+          <select class="form-select">
+            <option>Telegram</option>
+            <option>MAX</option>
+            <option>Позвонить</option>
+            <option>Email</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Количество и детали</label>
+          <textarea class="form-textarea" placeholder="Например: 1 подвес для сада. Или: 3 штуки для зоны отдыха отеля..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Отправить заявку на подвес</button>
+        <p class="form-note" style="text-align:center;">
+          Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+        </p>
+      </div>
+    </form>
+    <div class="success-msg" id="successMsg">
+      ✓ Заявка принята!<br/>
+      Мы свяжемся с вами в течение часа и пришлём полный каталог.
+    </div>
+  </div>
+</div>
+
+<!-- RELATED -->
+<section class="related">
+  <div class="related-header fade-up">
+    <div class="section-label">Коллекция</div>
+    <h2 class="section-title">Другие <em>изделия</em></h2>
+  </div>
+  <div class="related-grid fade-up">
+    <a href="stool.html" class="related-card">
+      <img src="image%20(1).webp" alt="Кресло" />
+      <div class="related-card-info">
+        <div class="related-card-name">Кресло</div>
+        <div class="related-card-price">от 120 000 ₽</div>
+      </div>
+    </a>
+    <a href="bench.html" class="related-card">
+      <img src="image%20(11)%20(1).webp" alt="Скамейка" />
+      <div class="related-card-info">
+        <div class="related-card-name">Скамейка</div>
+        <div class="related-card-price">от 120 000 ₽</div>
+      </div>
+    </a>
+    <a href="table.html" class="related-card">
+      <img src="Стол.webp" alt="Стол" />
+      <div class="related-card-info">
+        <div class="related-card-name">Стол</div>
+        <div class="related-card-price">от 220 000 ₽</div>
+      </div>
+    </a>
+    <a href="chair.html" class="related-card">
+      <img src="Табуретка.webp" alt="Табурет" />
+      <div class="related-card-info">
+        <div class="related-card-name">Табурет</div>
+        <div class="related-card-price">от 90 000 ₽</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <img src="Эмблема нашей компании (Без текста).webp" alt="BARS FURNITURE" />
+    <p class="footer-tagline">
+      Премиальная уличная мебель<br/>
+      из нержавеющей стали AISI 304.<br/>
+      Ручное производство. Made in Russia.
+    </p>
+  </div>
+  <div class="footer-links">
+    <h4>Коллекция</h4>
+    <ul>
+      <li><a href="stool.html">Кресло</a></li>
+      <li><a href="table.html">Стол</a></li>
+      <li><a href="bench.html">Скамейка</a></li>
+      <li><a href="hammock.html">Подвес для гамака</a></li>
+      <li><a href="container.html">Контейнер</a></li>
+      <li><a href="chair.html">Табурет</a></li>
+    </ul>
+  </div>
+  <div class="footer-links">
+    <h4>Компания</h4>
+    <ul>
+      <li><a href="front.html#about">О производстве</a></li>
+      <li><a href="front.html#b2b">Для бизнеса (B2B)</a></li>
+      <li><a href="front.html#contact">Контакты</a></li>
+      <li><a href="gid.html">Гарантия</a></li>
+      <li><a href="https://t.me/BarsFurniture" target="_blank">Telegram</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2010–2026 ООО «Барс». Все права защищены.</span>
+    <span>bars-furniture.ru</span>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  function setPhoto(src, thumb) {
+    document.getElementById('mainPhoto').src = src;
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+
+  document.getElementById('productForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  });
+</script>
+<script>
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  function closeMenu() {
+    burger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !burger.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) closeMenu();
+  });
+</script>
+</body>
+</html>
