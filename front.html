@@ -1291,7 +1291,7 @@
         Мы не передаём данные третьим лицам.
       </p>
     </form>
-    <div class="success-msg" id="successMsg">
+    <div class="success-msg" id="successMsg" style="opacity:1!important;">
       ✓ Заявка отправлена! Свяжемся с вами в течение часа.
     </div>
   </div>
@@ -1379,62 +1379,69 @@
 </script>
 
 <script>
-
-  // ── SCROLL ANIMATIONS ──
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  // Form submit
-  async function handleSubmit(e) {
+  // ── ФОРМА: отдельный изолированный блок (не зависит от других скриптов) ──
+  window.handleSubmit = async function(e) {
     e.preventDefault();
-    const form = document.getElementById('leadForm');
-    const btn = form.querySelector('button[type="submit"]');
-    const msg = document.getElementById('successMsg');
+    var form = document.getElementById('leadForm');
+    var btn  = form.querySelector('button[type="submit"]');
+    var msg  = document.getElementById('successMsg');
 
-    const name = form.querySelector('[name="name"]').value;
-    const phone = form.querySelector('[name="phone"]').value;
-    const message = form.querySelector('[name="message"]').value;
+    var name    = (form.querySelector('[name="name"]')    || {}).value || '—';
+    var phone   = (form.querySelector('[name="phone"]')   || {}).value || '—';
+    var message = (form.querySelector('[name="message"]') || {}).value || '—';
 
     btn.disabled = true;
     btn.textContent = 'Отправка...';
 
-    const now = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
-    const text = `🪑 Новая заявка — BARS FURNITURE\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n💬 Сообщение: ${message || '—'}\n\n🕐 ${now}`;
+    var now  = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
+    var text = '🪑 Новая заявка — BARS FURNITURE (Главная)\n\n👤 Имя: ' + name + '\n📞 Телефон: ' + phone + '\n💬 Сообщение: ' + message + '\n\n🕐 ' + now;
 
     try {
-      // Telegram
       await fetch('https://api.telegram.org/bot8770011427:AAGpfUyixHQ3DzuKqO41CB5OXMM8Ar7nq4I/sendMessage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: '976722695', text })
+        body: JSON.stringify({ chat_id: '976722695', text: text })
       });
-
-      // Email на bars.furniture@mail.ru
       await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
           access_key: '4f03fafa-3b91-43da-93c2-e1811454dfed',
-          subject: '🪑 Новая заявка — BARS FURNITURE',
-          name: name,
-          phone: phone,
-          message: message || '—'
+          subject: '🪑 Новая заявка — BARS FURNITURE (Главная)',
+          name: name, phone: phone, message: message
         })
       });
-    } catch (err) { console.error('Ошибка отправки:', err); }
+    } catch(err) { console.error('Ошибка отправки:', err); }
+
+    if (typeof ym !== 'undefined') ym(108481500, 'reachGoal', 'leave_request');
     form.style.display = 'none';
-    msg.style.display = 'block';
-  }
+    msg.style.display  = 'block';
+    msg.style.opacity  = '1';
+  };
+</script>
+
+<script>
+  // ── SCROLL ANIMATIONS ──
+  try {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+  } catch(e) {}
 
   // ── NAV SCROLL EFFECT ──
-  const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-     
+  try {
+    var navEl = document.querySelector('nav');
+    if (navEl) {
+      window.addEventListener('scroll', function() {
+        navEl.style.borderBottomColor = window.scrollY > 50
+          ? 'rgba(201,169,110,0.15)'
+          : 'rgba(255,255,255,0.08)';
+      });
+    }
+  } catch(e) {}
+</script>
+</body>
+</html>
