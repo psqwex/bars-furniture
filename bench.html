@@ -704,7 +704,7 @@
   </div>
 
   <div class="form-wrap fade-up">
-    <form id="productForm" onsubmit="handleSubmit(event)">
+    <form id="productForm" >
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div class="form-row">
           <div class="form-group">
@@ -829,9 +829,31 @@
     thumb.classList.add('active');
   }
 
-  document.getElementById('productForm').addEventListener('submit', function(e) {
+  document.getElementById('productForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    this.style.display = 'none';
+    const form = this;
+    const btn = form.querySelector('button[type="submit"]');
+    const inputs = form.querySelectorAll('input, select, textarea');
+    const name = inputs[0]?.value || '—';
+    const phone = inputs[1]?.value || '—';
+    const contact = inputs[2]?.value || '—';
+    const details = inputs[3]?.value || '—';
+    btn.disabled = true;
+    btn.textContent = 'Отправка...';
+    const now = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
+    const text = `🪑 Новая заявка — BARS FURNITURE (Скамейка)\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n💬 Способ связи: ${contact}\n📋 Детали: ${details}\n\n🕐 ${now}`;
+    try {
+      await fetch('https://api.telegram.org/bot8770011427:AAGpfUyixHQ3DzuKqO41CB5OXMM8Ar7nq4I/sendMessage', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: '976722695', text })
+      });
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ access_key: '4f03fafa-3b91-43da-93c2-e1811454dfed', subject: '🪑 Новая заявка — Скамейка', name, phone, message: `Способ связи: ${contact}. Детали: ${details}` })
+      });
+    } catch (err) { console.error('Ошибка отправки:', err); }
+    if (typeof ym !== 'undefined') ym(108481500, 'reachGoal', 'leave_request');
+    form.style.display = 'none';
     document.getElementById('successMsg').style.display = 'block';
   });
 </script>
