@@ -309,18 +309,46 @@
       .related-grid { grid-template-columns: 1fr; }
       .messenger-btn { flex: 1 1 100%; }
     }
+  
+    /* ── FLOATING CTA ── */
+    .float-cta {
+      position: fixed;
+      right: 24px;
+      bottom: 36px;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .float-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      border-radius: 28px;
+      height: 50px;
+      padding: 0 20px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      background: rgba(20,19,17,0.96);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #f0ede8;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .float-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.55); }
+    .float-btn svg { flex-shrink: 0; opacity: 0.85; }
+    @media (max-width: 768px) {
+      .float-cta { right: 16px; bottom: 24px; gap: 12px; }
+      .float-btn { width: 52px; height: 52px; border-radius: 50%; padding: 0; justify-content: center; }
+      .float-btn-label { display: none; }
+    }
+
   </style>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-   })(window, document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
-   ym(108481500, "init", {webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/108481500" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 
@@ -833,5 +861,18 @@
     if (window.innerWidth > 960) closeMenu();
   });
 </script>
+
+  <!-- FLOATING CTA -->
+  <div class="float-cta">
+    <a href="https://max.ru/u/f9LHodD0cOIXya3dJ3dM1AZYDFz_z14JZbrOJPO9oWI-qJNMZlWwAlf7dEM" target="_blank" class="float-btn float-btn-max" aria-label="Написать в MAX">
+      <img src="Иконки/Логотип_MAX.svg.png" width="24" height="24" alt="MAX" style="border-radius:6px;flex-shrink:0;filter:grayscale(1) brightness(0.6);" />
+      <span class="float-btn-label">MAX</span>
+    </a>
+    <a href="https://t.me/BarsFurniture" target="_blank" class="float-btn float-btn-tg" aria-label="Написать в Telegram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.85;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg>
+      <span class="float-btn-label">Telegram</span>
+    </a>
+  </div>
+
 </body>
 </html>
