@@ -36,10 +36,71 @@
       overflow-x: hidden;
     }
 
+    /* ── TOPBAR ── */
+    .topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 101;
+      height: 36px;
+      background: #161412;
+      border-bottom: 1px solid rgba(201,169,110,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+    }
+    .topbar-loc {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .topbar-hours {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    .topbar-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      padding: 4px 12px;
+      border-radius: 20px;
+      transition: opacity 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .topbar-btn:hover { opacity: 0.82; transform: translateY(-1px); }
+    .topbar-btn-tg  { background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
+    .topbar-btn-max { background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
+    @media (max-width: 768px) {
+      .topbar {
+        padding: 0 14px;
+        height: 32px;
+        font-size: 10px;
+      }
+      .topbar-loc { font-size: 10px; gap: 4px; }
+      .topbar-hours { font-size: 10px; gap: 4px; }
+    }
+
     /* ── NAVBAR ── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 36px; left: 0; right: 0;
       z-index: 100;
       display: flex;
       align-items: center;
@@ -123,7 +184,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: start;
-      padding: 72px 0 0;
+      padding: 108px 0 0;
     }
 
     .hero-content {
@@ -766,7 +827,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 72px;
+      top: 104px;
       left: 0;
       right: 0;
       background: rgba(12,11,9,0.97);
@@ -817,12 +878,12 @@
     }
 
     @media (max-width: 768px) {
-      nav { padding: 0 16px; }
+      nav { padding: 0 16px; top: 32px; }
       .nav-logo img { height: 30px; }
       .nav-logo-text span:first-child { font-size: 12px; }
 
       /* HERO */
-      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 72px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 104px; }
       .hero-content { padding: 40px 20px 36px; }
       .hero-visual { display: none; }
       .hero-image { display: none; }
@@ -887,20 +948,71 @@
       .about-features { grid-template-columns: 1fr; }
       .hero-stats { gap: 16px; }
     }
+
+    /* ── FLOATING CTA ── */
+    .float-cta {
+      position: fixed;
+      right: 24px;
+      bottom: 36px;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .float-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      border-radius: 28px;
+      height: 50px;
+      padding: 0 20px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .float-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.55); }
+    .float-btn-max {
+      background: rgba(20,19,17,0.96);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text);
+      backdrop-filter: blur(12px);
+    }
+    .float-btn-tg {
+      background: rgba(20,19,17,0.96);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text);
+      backdrop-filter: blur(12px);
+    }
+    .float-btn svg { flex-shrink: 0; }
+    @media (max-width: 768px) {
+      .float-cta { right: 16px; bottom: 24px; gap: 12px; }
+      .float-btn { width: 52px; height: 52px; border-radius: 50%; padding: 0; justify-content: center; }
+      .float-btn-label { display: none; }
+    }
+
   </style>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-   })(window, document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
-   ym(108481500, "init", {webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/108481500" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 </head>
 <body>
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-loc">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      г. Москва
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-hours">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l3 2"/></svg>
+        Пн–Чт: 9:00–18:00 · Пт: 9:00–16:45
+      </div>
+    </div>
+  </div>
+
 
 <!-- NAVBAR -->
 <nav>
@@ -1025,11 +1137,11 @@
       </div>
     </div>
 
-    <!-- Контейнер -->
+    <!-- Уличный контейнер -->
     <div class="product-card" onclick="location.href='container.html'" style="cursor:pointer;">
-      <img src="image%20(12)%20(1).webp" alt="Контейнер" class="product-img" />
+      <img src="image%20(12)%20(1).webp" alt="Уличный контейнер" class="product-img" />
       <div class="product-info">
-        <div class="product-name">Контейнер</div>
+        <div class="product-name">Уличный контейнер</div>
         <div class="product-price">от 90 000 ₽</div>
         <a href="container.html" class="product-link">Узнать подробнее →</a>
       </div>
@@ -1254,7 +1366,7 @@
       </a>
       <a href="https://max.ru/u/f9LHodD0cOIXya3dJ3dM1AZYDFz_z14JZbrOJPO9oWI-qJNMZlWwAlf7dEM" class="contact-method" target="_blank">
         <div class="contact-method-icon" style="overflow:hidden; padding:0;">
-          <img src="Иконки/Логотип_MAX.svg.png" alt="MAX"
+          <img src="Иконки/Логотип_MAX.svg.png" alt="MAX" style="filter:grayscale(1) brightness(0.6);"
                style="width:100%; height:100%; object-fit:cover; border-radius:50%;
                       filter: grayscale(1) brightness(1.4); opacity:0.7;" />
         </div>
@@ -1326,7 +1438,7 @@
       <li><a href="#catalog">Стол</a></li>
       <li><a href="#catalog">Скамейка</a></li>
       <li><a href="#catalog">Подвес для гамака</a></li>
-      <li><a href="#catalog">Контейнер</a></li>
+      <li><a href="#catalog">Уличный контейнер</a></li>
       <li><a href="#catalog">Табурет</a></li>
     </ul>
   </div>
@@ -1454,5 +1566,18 @@
     }
   } catch(e) {}
 </script>
+
+  <!-- FLOATING CTA -->
+  <div class="float-cta">
+    <a href="https://max.ru/u/f9LHodD0cOIXya3dJ3dM1AZYDFz_z14JZbrOJPO9oWI-qJNMZlWwAlf7dEM" target="_blank" class="float-btn float-btn-max" aria-label="Написать в MAX">
+      <img src="Иконки/Логотип_MAX.svg.png" width="24" height="24" alt="MAX" style="border-radius:6px;flex-shrink:0;filter:grayscale(1) brightness(0.6);" />
+      <span class="float-btn-label">MAX</span>
+    </a>
+    <a href="https://t.me/BarsFurniture" target="_blank" class="float-btn float-btn-tg" aria-label="Написать в Telegram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.85;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg>
+      <span class="float-btn-label">Telegram</span>
+    </a>
+  </div>
+
 </body>
 </html>
